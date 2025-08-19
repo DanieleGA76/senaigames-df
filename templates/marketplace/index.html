@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Candango Neural - Apresentação do Jogo</title>
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Google Fonts: Orbitron para títulos, Roboto para texto -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- Phosphor Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+    <!-- Estilos Customizados -->
+
+{% load static %}
+<link rel="stylesheet" href="{% static 'styles/style.css' %}">
+
+</head>
+<body>
+
+    <!-- Seção 1: Header (Cabeçalho) -->
+    <header class="header-logos sticky-top">
+        <div class="container d-flex justify-content-center align-items-center gap-4">
+            <!-- Placeholder para o logo do Brasília Mais TI -->
+            <img src="{% static 'assets/img/Brasilia mais TI.png' %}" alt="Logo Brasília Mais TI">
+            <!-- Placeholder para o logo do SENAI -->
+            <img src="{% static 'assets/img/Senai DF.png' %}" alt="Logo SENAI">
+            <a href="{% url 'membro'%}">Sou Membro</a>
+            <a href="{% url 'tecnologia'%}">Tecnologias</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Seção 2: Hero (Destaque Principal) -->
+        <section id="hero" class="hero">
+            <div class="container fade-in-section">
+                <h1 class="display-4"><span class="text-glow">Candango</span> Neural</h1>
+                <p class="slogan my-4">Onde a realidade é apenas o começo da jornada.</p>
+                <a href="#marketplace" class="btn btn-glow mt-3">Descubra o Jogo</a>
+            </div>
+        </section>
+
+        <!-- Seção 3: Galeria de Cards (Estilo Marketplace) -->
+        <section id="marketplace" class="marketplace-section">
+            <div class="container">
+                <div class="text-center mb-5 fade-in-section">
+                    <h2>Conheça o Universo</h2>
+                    <p class="lead text-secondary">Explore os elementos que tornam Cyber Odyssey único.</p>
+                </div>
+                <div class="row g-4 justify-content-center">
+                    <!-- Card 1: Personagem Principal -->
+                    <div class="col-md-6 col-lg-3 d-flex align-items-stretch fade-in-section" style="animation-delay: 0.2s;">
+                        <div class="card card-tech text-center w-100">
+                            <a href=""><img src="{% static 'assets/img/supercandango2.jpeg' %}" class="card-img-top" alt="Personagem Principal Kaira"></a>
+                            <div class="card-body">
+                                <h5 class="card-title">Personagem Principal</h5>
+                                <p class="card-text text-secondary">Kaira, uma hacker renegada com implantes cibernéticos, busca a verdade nas sombras de uma metrópole neon.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 2: Funcionalidade Inovadora -->
+                    <div class="col-md-6 col-lg-3 d-flex align-items-stretch fade-in-section" style="animation-delay: 0.4s;">
+                        <div class="card card-tech text-center w-100">
+                            <div class="card-body d-flex flex-column justify-content-center">
+                                <i class="ph-brain icon mx-auto mb-3"></i>
+                                <h5 class="card-title">Hackeamento Neural</h5>
+                                <p class="card-text text-secondary">Invada a mente dos inimigos, controle drones e manipule o ambiente em tempo real com uma mecânica de hacking inovadora.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 3: Tecnologia Utilizada -->
+                    <div class="col-md-6 col-lg-3 d-flex align-items-stretch fade-in-section" style="animation-delay: 0.6s;">
+                        <div class="card card-tech text-center w-100">
+                             <div class="card-body d-flex flex-column justify-content-center">
+                                <i class="ph-game-controller icon mx-auto mb-3"></i>
+                                <h5 class="card-title">Engine Gráfica</h5>
+                                <p class="card-text text-secondary">Construído na Unreal Engine 5, o jogo oferece visuais de última geração com Ray Tracing e cenários dinâmicos.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 4: Cenário -->
+                    <div class="col-md-6 col-lg-3 d-flex align-items-stretch fade-in-section" style="animation-delay: 0.8s;">
+                        <div class="card card-tech text-center w-100">
+                            <img src="{% static 'assets/img/cerradofuturo.jpeg' %}" class="card-img-top" alt="Cenário do Jogo Neo-Veridia">
+                            <div class="card-body">
+                                <h5 class="card-title">O Cenário</h5>
+                                <p class="card-text text-secondary">Explore Neo-Veridia, uma cidade vertical onde corporações gigantescas controlam tudo, das ruas chuvosas aos arranha-céus brilhantes.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a href="#candangos" class="btn btn-glow mt-3">Os Candangos</a>
+            </div>
+        </section>
+        <section id="candangos" class="hero">
+            <div class="carousel-wrapper" id="carouselWrapper">
+                <div class="speakers-carousel" id="speakersCarousel">
+                </div>
+            </div>
+        </section>
+        
+    </main>
+
+    <!-- Seção 4: Rodapé -->
+    <footer class="footer-tech text-center">
+        <div class="container">
+            <p class="mb-2">&copy; 2024 Equipe de Desenvolvimento de Jogos - SENAI DF. Todos os direitos reservados.</p>
+            <p class="text-secondary small">Um projeto apresentado no evento Brasília Mais TI.</p>
+            <div class="social-icons mt-3">
+                <a href="#" aria-label="Twitter"><i class="ph ph-twitter-logo"></i></a>
+                <a href="#" aria-label="Instagram"><i class="ph ph-instagram-logo"></i></a>
+                <a href="#" aria-label="Twitch"><i class="ph ph-twitch-logo"></i></a>
+            </div>
+        </div>
+    </footer>
+    
+
+    <!-- Bootstrap 5 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Pequeno script para adicionar a classe de animação quando a seção entra na tela
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in-section');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        // Observa todas as seções com a classe .fade-in-section (exceto a primeira que anima direto)
+        document.querySelectorAll('.marketplace-section, .footer-tech').forEach(section => {
+            observer.observe(section);
+        });
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const speakersData = [
+                { img: "{% static 'assets/img/profromulo.jpeg' %}", name: 'Romulo', title: 'Professor Senai DF' },
+                { img: "{% static 'assets/img/danielegomes.jpeg' %}", name: 'Daniele Gomes', title: 'Aluna Python Developer' },
+                { img: "{% static 'assets/img/bruninho.jpeg' %}", name: 'Bruno Pereira de Azevedo', title: 'Aluno Python Devolper' },
+                { img: "{% static 'assets/img/bianca.jpeg' %}", name: 'Bianca Cristina Alves Lopes', title: 'Aluna Python Devolper' },
+                { img: "{% static 'assets/img/anaclara.jpeg' %}", name: 'Ana Clara Barbosa de Souza', title: 'Aluna Python Devolper' },
+                { img: "{% static 'assets/img/gabriel.jpeg' %}", name: 'João Gabriel Oliveira Cruz', title: 'Aluno Python Devolper' },
+                { img: "{% static 'assets/img/keny.jpeg' %}", name: 'Kenny B. O. Martins dos Santos', title: 'Aluno Python Devolper' },
+                { img: "{% static 'assets/img/luisfernando.jpeg' %}", name: 'Luis Fernando', title: 'Aluno Python Devolper' },
+                { img: "{% static 'assets/img/evanilson.jpeg' %}", name: 'Evanilson Braga', title: 'Aluno Python Devolper' },
+                { img: "{% static 'assets/img/matheus1.jpeg' %}", name: 'Matheus Ribeiro', title: 'Aluno Python Devolper' },
+                { img: "{% static 'assets/img/parke.jpeg' %}", name: 'Henrique Monteiro Parker', title: 'Aluno Python Devolper' },
+                { img: "{% static 'assets/img/ruth.jpeg' %}", name: 'Ruth Marques dos Santos', title: 'Aluna Python Devolper' }
+            ];
+
+            const carousel = document.getElementById('speakersCarousel');
+            const allSpeakers = [...speakersData, ...speakersData];
+
+            allSpeakers.forEach(speaker => {
+                const card = document.createElement('div');
+                card.className = 'speaker-card';
+                card.innerHTML = `
+                    <img src="${speaker.img}" alt="Foto de ${speaker.name}">
+                    <h3>${speaker.name}</h3>
+                    <p>${speaker.title}</p>
+                `;
+                carousel.appendChild(card);
+            });
+        });
+    </script>
+    <video controls width="640" height="360">
+        <source src="{% static 'assets/video/candango neural.mp4' %}" type="video/mp4">
+        Video do Candango Neural
+    </video>
+</body>
+</html>

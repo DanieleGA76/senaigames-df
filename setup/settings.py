@@ -40,7 +40,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'crud_base'
+    'crud_base',
+    'marketplace'
 ]
 
 MIDDLEWARE = [
@@ -83,7 +84,8 @@ DATABASES = {
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
-
+# conexão de testes - sqlite
+# conexão de produção - mysql
 
 # Password validation
 # https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators
@@ -119,7 +121,14 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
-STATIC_URL = 'static/'
+STATIC_URL = '/static/'
+
+# onde o Django vai procurar os arquivos estáticos
+STATICFILES_DIRS=[
+    os.path.join(BASE_DIR / 'setup' / 'static')
+]
+# Onde os arquivos estáticos serão coletados para produção
+STATIC_ROOT = os.path.join(BASE_DIR / 'static')
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field

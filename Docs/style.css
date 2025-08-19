@@ -1,0 +1,179 @@
+        /* --- Configurações Globais e Tema Escuro --- */
+        body {
+            background-color: #0d0d1a; /* Azul petróleo bem escuro */
+            color: #e0e0e0; /* Cinza claro para texto */
+            font-family: 'Roboto', sans-serif;
+            overflow-x: hidden; /* Previne scroll horizontal */
+        }
+
+        /* --- Tipografia com Estilo Gamer --- */
+        h1, h2, h3, h4, h5, h6, .display-4 {
+            font-family: 'Orbitron', sans-serif;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: #ffffff; /* Branco puro para títulos */
+            text-shadow: 0 0 5px rgba(255, 0, 144, 0.5); /* Sombra ciano sutil */
+        }
+        
+        .text-glow {
+            color: #00ffff; /* Ciano vibrante */
+            text-shadow: 0 0 8px #00ffff, 0 0 12px #00ffff, 0 0 20px #00ffff;
+        }
+
+        /* --- Animações e Transições --- */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .fade-in-section {
+            animation: fadeIn 1s ease-out forwards;
+        }
+        
+        /* --- Header --- */
+        .header-logos {
+            padding: 1.5rem 0;
+            background: rgba(13, 13, 26, 0.8);
+            backdrop-filter: blur(5px);
+        }
+
+        .header-logos img {
+            max-height: 50px; /* Altura máxima para os logos */
+            filter: grayscale(50%) contrast(150%); /* Efeito para integrar ao tema */
+            transition: filter 0.3s ease;
+        }
+        
+        .header-logos img:hover {
+            filter: grayscale(0%) contrast(100%);
+        }
+
+        /* --- Seção Hero --- */
+        .hero {
+            min-height: 80vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 4rem 1rem;
+            background: linear-gradient(180deg, rgba(13, 13, 26, 0) 0%, #0d0d1a 90%), 
+                        url('../../../static/admin/img/brasiliafuturo.jpeg') no-repeat center center;
+            background-size: cover;
+        }
+        
+        .hero .display-4 {
+            font-size: calc(2.5rem + 3vw);
+            font-weight: 900;
+        }
+
+        .slogan {
+            font-size: calc(1rem + 0.5vw);
+            color: #a0a0c0; /* Roxo claro acinzentado */
+            letter-spacing: 2px;
+        }
+
+        .btn-glow {
+            background: linear-gradient(45deg, #ff00ff, #00ffff); /* Gradiente magenta para ciano */
+            border: none;
+            color: #fff;
+            padding: 15px 35px;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            border-radius: 50px;
+            box-shadow: 0 0 15px #ff00ff, 0 0 25px #00ffff, inset 0 0 10px rgba(255, 255, 255, 0.3);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn-glow:before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 300%;
+            height: 300%;
+            background: radial-gradient(circle, rgba(255,255,255,0.4), transparent 40%);
+            transform: translate(-50%, -50%) scale(0);
+            transition: transform 0.5s ease;
+        }
+
+        .btn-glow:hover {
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 0 25px #ff00ff, 0 0 40px #00ffff, inset 0 0 10px rgba(255, 255, 255, 0.5);
+        }
+
+        .btn-glow:hover:before {
+            transform: translate(-50%, -50%) scale(1);
+        }
+
+        /* --- Seção Marketplace (Cards) --- */
+        .marketplace-section {
+            padding: 5rem 0;
+        }
+
+        .card-tech {
+            background: rgba(255, 255, 255, 0.05); /* Fundo semi-transparente */
+            border: 1px solid rgba(0, 255, 255, 0.2); /* Borda ciano */
+            border-radius: 15px;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            backdrop-filter: blur(10px);
+            overflow: hidden;
+        }
+        
+        .card-tech:hover {
+            transform: translateY(-15px);
+            border-color: #00ffff;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+        }
+        
+        .card-tech .card-img-top {
+            border-bottom: 1px solid rgba(0, 255, 255, 0.2);
+            transition: border-color 0.3s ease;
+        }
+        
+        .card-tech:hover .card-img-top {
+             border-color: #00ffff;
+        }
+
+        .card-tech .card-body {
+            padding: 1.5rem;
+        }
+        
+        .card-tech .card-title {
+            color: #00ffff; /* Título do card em ciano */
+        }
+        
+        .card-tech .icon {
+            font-size: 4rem;
+            color: #ff00ff; /* Ícone em magenta */
+            text-shadow: 0 0 10px #ff00ff;
+            transition: all 0.3s ease;
+        }
+
+        .card-tech:hover .icon {
+            transform: scale(1.2) rotate(-10deg);
+            color: #00ffff;
+            text-shadow: 0 0 15px #00ffff;
+        }
+
+        /* --- Rodapé --- */
+        .footer-tech {
+            background-color: #05050a;
+            padding: 2rem 0;
+            border-top: 1px solid rgba(0, 255, 255, 0.2);
+        }
+        
+        .footer-tech .social-icons a {
+            color: #a0a0c0;
+            font-size: 1.5rem;
+            margin: 0 10px;
+            transition: all 0.3s ease;
+        }
+        
+        .footer-tech .social-icons a:hover {
+            color: #00ffff;
+            transform: translateY(-3px);
+            text-shadow: 0 0 8px #00ffff;
+        }
+
