@@ -40,8 +40,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'crud_base',
-    'marketplace'
+    'marketplace.apps.MarketplaceConfig',
+    'crud_base'
 ]
 
 MIDDLEWARE = [
@@ -88,7 +88,7 @@ DATABASES = {
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'candango',
+        'NAME': 'candango1',
         'USER': 'root',
         'PASSWORD': 'senai@123',
         'HOST': 'localhost',  # Ou o IP do seu servidor MySQL, se não for local
@@ -98,7 +98,7 @@ DATABASES = {
         },
          'test': { # Adicione esta seção para o banco de dados de teste
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'candango_db_test',  # <--- MUITO IMPORTANTE: UM NOME DIFERENTE PARA O BANCO DE DADOS DE TESTE
+        'NAME': 'candango1_db_test',  # <--- MUITO IMPORTANTE: UM NOME DIFERENTE PARA O BANCO DE DADOS DE TESTE
         'USER': 'root',
         'PASSWORD': 'senai@123',
         'HOST': 'localhost',

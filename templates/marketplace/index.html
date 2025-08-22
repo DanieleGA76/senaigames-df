@@ -57,7 +57,7 @@
                     <!-- Card 1: Personagem Principal -->
                     <div class="col-md-6 col-lg-3 d-flex align-items-stretch fade-in-section" style="animation-delay: 0.2s;">
                         <div class="card card-tech text-center w-100">
-                            <a href=""><img src="{% static 'assets/img/supercandango2.jpeg' %}" class="card-img-top" alt="Personagem Principal Kaira"></a>
+                            <a href=""><img src="{% static 'assets/img/supercandango3.jpeg' %}" class="card-img-top" alt="Personagem Principal Kaira"></a>
                             <div class="card-body">
                                 <h5 class="card-title">Personagem Principal</h5>
                                 <p class="card-text text-secondary">Kaira, uma hacker renegada com implantes cibernéticos, busca a verdade nas sombras de uma metrópole neon.</p>
@@ -173,9 +173,18 @@
             });
         });
     </script>
-    <video controls width="640" height="360">
-        <source src="{% static 'assets/video/candango neural.mp4' %}" type="video/mp4">
-        Video do Candango Neural
-    </video>
+    <select name="" id="">
+        
+    </select>
+    <div class="video-container">
+        <video controls>
+            <source src="{% static 'assets/video/candango neural.mp4' %}" type="video/mp4">
+            Seu navegador não suporta a tag de vídeo.
+        </video>
+        <video controls>
+            <source src="{% static 'assets/video/neuroCandango.mp4' %}" type="video/mp4">
+            Seu navegador não suporta a tag de vídeo.
+        </video>
+    </div>
 </body>
 </html>

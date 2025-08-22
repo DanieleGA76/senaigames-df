@@ -33,6 +33,15 @@
             
         </div>
     </header>
+<!-- DTL (Django Template Engine) -->
+{% if cards %}
+<h6>Ùltimos membros Cadastrados</h6>
+{% for membro in cards %}
+    <p>{{membro.nome}}</p>
+{% endfor %}
+{% else %}
+    <!-- <p> Maravilha! Você será o primeiro na nossa lista</p>-->
+{% endif %}
 
     <div class="login-container">
         <div class="login-card">
@@ -44,13 +53,12 @@
                 <label for="senha">Senha</label>
                 <input type="password" name="Senha" id="senha">
                 
-                <label for="plataforma">Plataforma</label>
-                <select name="" id="">
-                    {% for chave, valor in cards.items%}
-                    <option value="{{chave}}">{{valor.nome}}</option>
+                <label for="genero">Gêneros</label>
+                <select name="genero" id="genero">
+                    {% for genero in generos %}
+                    <option value="{{genero.id}}">{{genero.nome}}</option>
                     {% endfor %}
                 </select>
-
                 <button type="submit">Entrar</button>
             </form>
         </div>

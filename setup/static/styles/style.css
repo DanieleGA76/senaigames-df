@@ -471,6 +471,12 @@
         }
 
             /* Opcional: Estilize a tag video para garantir que ela ocupe a largura total do contêiner */
+            .video-container{
+                display: flex;
+                align-items: center;
+                height: 100vb;
+            }
+            
             .video-container video {
             width: 100%;
             align-items: center;

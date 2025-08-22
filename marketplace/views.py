@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
+from marketplace.models import Membro, Genero
 
 
 # Create your views here.
@@ -11,13 +12,18 @@ def index(request):
     return render(request,'marketplace/index.html')
 # Create your views here.
 
-def autentica_menbro(request):
-    dados = {
-        1:{"nome": "Visual Novel"},
-        2:{"nome": "Plataforma"},
-        3:{"nome": "Acao"}
-    }
-    return render(request, 'marketplace/sou_membro.html', {"cards":dados})
+def autentica_membro(request):
+    
+    Membros = Membro.objects.all()
+    generos = Genero.objects.all()
+    return render(request, 'marketplace/sou_membro.html',{ 
+        "membros": Membros,
+        "generos": generos
+    }        
+      )
+    
+
+    
 
 def tecnologia(request):
     return render(request, 'marketplace/tecnologia.html')
