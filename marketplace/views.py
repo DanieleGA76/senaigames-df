@@ -9,7 +9,9 @@ def index(request):
     # request - requisição
     # template - html entre outros
     # context - objetos (python, python com banco de dados)
-    return render(request,'marketplace/index.html')
+
+    Membros = Membro.objects.all()
+    return render(request,'marketplace/index.html', {"membros": Membros,})
 # Create your views here.
 
 def autentica_membro(request):

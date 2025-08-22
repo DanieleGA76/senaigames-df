@@ -60,7 +60,7 @@
                             <a href=""><img src="{% static 'assets/img/supercandango3.jpeg' %}" class="card-img-top" alt="Personagem Principal Kaira"></a>
                             <div class="card-body">
                                 <h5 class="card-title">Personagem Principal</h5>
-                                <p class="card-text text-secondary">Kaira, uma hacker renegada com implantes cibernéticos, busca a verdade nas sombras de uma metrópole neon.</p>
+                                <p class="card-text text-secondary">Um jovem e promissor assistente administrativo, cuja vida é dedicada a tarefas burocráticas no coração de um escritório em Brasília. Sua rotina é monótona, preenchida por planilhas e relatórios, mas ele nutre uma paixão secreta por eletrônica e pela natureza do Cerrado, que ele visita nos fins de semana.</p>
                             </div>
                         </div>
                     </div>
@@ -70,8 +70,8 @@
                         <div class="card card-tech text-center w-100">
                             <div class="card-body d-flex flex-column justify-content-center">
                                 <i class="ph-brain icon mx-auto mb-3"></i>
-                                <h5 class="card-title">Hackeamento Neural</h5>
-                                <p class="card-text text-secondary">Invada a mente dos inimigos, controle drones e manipule o ambiente em tempo real com uma mecânica de hacking inovadora.</p>
+                                <h5 class="card-title">A Missão</h5>
+                                <p class="card-text text-secondary">Ao completar uma tarefa complexa para sua empresa, ele ativa acidentalmente uma antiga tecnologia neural, que se funde com sua mente. Ele se torna o "Super Neural", adquirindo poderes relacionados à tecnologia e à natureza do Cerrado.</p>
                             </div>
                         </div>
                     </div>
@@ -81,8 +81,8 @@
                         <div class="card card-tech text-center w-100">
                              <div class="card-body d-flex flex-column justify-content-center">
                                 <i class="ph-game-controller icon mx-auto mb-3"></i>
-                                <h5 class="card-title">Engine Gráfica</h5>
-                                <p class="card-text text-secondary">Construído na Unreal Engine 5, o jogo oferece visuais de última geração com Ray Tracing e cenários dinâmicos.</p>
+                                <h5 class="card-title">Cerrado Neural de Brasília</h5>
+                                <p class="card-text text-secondary">O cenário do jogo é uma Brasília do futuro, onde a paisagem do Cerrado não foi substituída, mas sim integrada e aprimorada pela tecnologia neural. A cidade não é apenas de concreto e aço, mas um organismo vivo, pulsando com energia biotecnológica.</p>
                             </div>
                         </div>
                     </div>
@@ -109,6 +109,17 @@
         </section>
         
     </main>
+
+<!-- DTL (Django Template Engine) -->
+{% if cards %}
+<h6>membros Cadastrados</h6>
+{% for membro in cards %}
+    <p>{{membro.nome}}</p>
+    <img src="{% static 'static/assets/img/{{membro.foto}}' %}" alt="">
+{% endfor %}
+{% else %}
+    <!-- <p> Maravilha! Você será o primeiro na nossa lista</p>-->
+{% endif %}
 
     <!-- Seção 4: Rodapé -->
     <footer class="footer-tech text-center">
